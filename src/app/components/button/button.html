@@ -1,3 +1,4 @@
-<button class="primary">
+<button
+        [class]="{'btn-primary': buttonType===BUTTON_TYPE.PRIMARY, 'btn-secondary': buttonType===BUTTON_TYPE.SECONDARY}">
         <span i18n>{{buttonText.toUpperCase()}}</span>
 </button>

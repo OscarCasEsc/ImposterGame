@@ -1,5 +1,26 @@
-// Variables
-$primary-purple: #7311D4;
-$emergency-red: #FF003C;
-$neon-terminal: #00FF9F;
-$white: #FFF;
+// Base colors
+$color-purple: #7311d4;
+$color-red: #ff003c;
+$color-neon-green: #00ff9f;
+$color-white: #ffffff;
+$color-black: #000000;
+
+// Opacities
+$opacities: (
+    5: 0.05,
+    10: 0.10,
+    90: 0.90,
+    100: 1
+);
+
+// Herpers
+@function alpha( $color, $opacity-key){
+    @return rgba($color, map-get($opacities,$opacity-key))
+};
+
+// Buttons
+$btn-primary: $color-purple;
+$btn-primary-hover: alpha($color-purple, 90);
+
+$btn-secondary: alpha($color-white, 5);
+$btn-secondary-hover: alpha($color-white, 10);

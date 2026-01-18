@@ -1,11 +1,27 @@
 @use '../../../_variables.scss' as v;
 
-button.primary {
-   background-color: v.$primary-purple;
-    color: v.$white;
+button {
     height: 40px;
     width: 171px;
     border: none;
     border-radius: 25px;
     cursor: pointer;
+    color: v.$color-white;
+
+    &.btn-primary {
+        background-color: v.$btn-primary;
+    }
+    &.btn-primary:hover {
+        background-color: v.$btn-primary-hover;
+    }
+
+    &.btn-secondary {
+        background-color: v.$btn-secondary;
+        border: 1px solid ;
+        
+    }
+
+    &.btn-secondary:hover {
+        background-color: v.$btn-secondary-hover;
+    }
 }
