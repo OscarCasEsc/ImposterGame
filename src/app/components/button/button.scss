@@ -1,0 +1,11 @@
+@use '../../../_variables.scss' as v;
+
+button.primary {
+   background-color: v.$primary-purple;
+    color: v.$white;
+    height: 40px;
+    width: 171px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
