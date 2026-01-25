@@ -1,0 +1,16 @@
+<div class="available-rooms">
+    <div class="available-rooms-title">
+        <div class="title-description">
+            <h2 class="title">Salas Disponibles</h2>
+            <div class="description">Únete a una partida activa ahora mismo</div>
+        </div>
+        <div class="number-of-players">
+            142 JUGADORES ONLINE
+        </div>
+    </div>
+    <div class="list-of-rooms">
+        @for (room of availableRooms; track room.name) {
+        <app-room [room]="room"></app-room>
+        }
+    </div>
+</div>

@@ -1,0 +1,32 @@
+@use '../../_variables.scss' as v;
+.available-rooms {
+  padding: 20px;
+  background-color: v.$color-purple-1;
+  .available-rooms-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 1.5rem;
+    .title-description {
+      .title {
+        color: v.$color-white;
+      }
+      .description {
+        color: v.$text-purple;
+      }
+    }
+    .number-of-players {
+      font-weight: 700;
+      padding: 0.375rem 0.75rem;
+      color: v.$text-purple;
+      background-color: v.$color-purple-2;
+      border-radius: 1.5rem;
+      border: 1px solid v.$border-purple;
+    }
+  }
+  .list-of-rooms {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+}

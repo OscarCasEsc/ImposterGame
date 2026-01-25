@@ -1,0 +1,140 @@
+@use '../../../_variables.scss' as v;
+.room {
+  background-color: v.alpha(v.$color-purple-2, 50);
+  border-radius: 1.5rem;
+  padding: 15px;
+  border: 1px solid v.$border-purple;
+  display: flex;
+  justify-content: space-between;
+  .room-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    .icon-circle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      &.purple {
+        background-color: v.alpha(v.$color-purple-4, 10);
+      }
+      > .icon {
+        height: 32px;
+        width: 32px;
+        &.purple {
+          color: v.$color-purple-4;
+        }
+      }
+    }
+  }
+  .room-players {
+    display: flex;
+    gap: 0.5rem;
+    .players {
+      display: flex;
+      flex-direction: column;
+      > .players-remaining {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+        > .number {
+          color: v.$text-purple;
+          font-weight: 600;
+          > span {
+            color: v.$color-white;
+          }
+        }
+        > .tag {
+          border-radius: 99px;
+          padding: 0.125rem 0.5rem;
+
+          font-size: 0.8rem;
+          font-weight: 600;
+          &.remaining {
+            color: v.$text-purple;
+            background: v.$tag-background-purple;
+          }
+          &.almost-full {
+            color: v.$text-orange;
+            background: v.$tag-background-orange;
+          }
+          &.full {
+            color: v.$text-red;
+            background: v.$tag-background-red;
+          }
+        }
+      }
+    }
+  }
+
+  .user-icon {
+    height: 15px;
+    width: 15px;
+  }
+  .image-title {
+    display: flex;
+    align-items: center;
+  }
+  .title {
+    color: v.$color-white;
+    font-weight: 700;
+    font-size: 1.125rem;
+  }
+  .user-status {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 0.5rem;
+    > .user {
+      display: flex;
+      align-items: center;
+      color: v.$text-purple;
+      > .name {
+        color: v.$color-white;
+        margin-left: 0.3rem;
+      }
+    }
+  }
+  .title-type {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+  }
+  .type {
+    font-size: 12px;
+    border: 1px solid v.$border-purple;
+    background-color: v.alpha(v.$color-purple-3, 50);
+    border-radius: 99px;
+    padding: 0.2rem 0.5rem;
+    font-weight: 700;
+    &.public {
+      color: v.$color-neon-green;
+    }
+  }
+  .status {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    .waiting-circle {
+      background-color: v.$color-neon-green;
+      height: 0.5rem;
+      width: 0.5rem;
+      border-radius: 50%;
+    }
+    .status-waiting {
+      color: v.$color-neon-green;
+      font-weight: 700;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+.room:hover {
+  background-color: v.alpha(v.$color-purple-2, 80);
+  border-color: v.alpha(v.$color-purple-4, 50);
+  .title {
+    color: v.$color-purple-4;
+  }
+}

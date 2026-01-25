@@ -1,26 +1,48 @@
 // Base colors
-$color-purple: #7311d4;
-$color-red: #ff003c;
+
+$color-purple-1: #191022;
+$color-purple-2: #261933;
+$color-purple-3: #362348;
+$color-purple-4: #7311d4;
+$color-purple-5: #ad92c9;
+$color-red-1: #ff003c;
+$color-red-2: #f87171;
+$color-orange-1: #eab308;
 $color-neon-green: #00ff9f;
 $color-white: #ffffff;
 $color-black: #000000;
 
 // Opacities
 $opacities: (
-    5: 0.05,
-    10: 0.10,
-    90: 0.90,
-    100: 1
+  5: 0.05,
+  10: 0.1,
+  50: 0.5,
+  80: 0.8,
+  90: 0.9,
+  100: 1,
 );
 
 // Herpers
-@function alpha( $color, $opacity-key){
-    @return rgba($color, map-get($opacities,$opacity-key))
-};
+@function alpha($color, $opacity-key) {
+  @return rgba($color, map-get($opacities, $opacity-key));
+}
 
 // Buttons
-$btn-primary: $color-purple;
-$btn-primary-hover: alpha($color-purple, 90);
+$btn-primary: $color-purple-4;
+$btn-primary-hover: alpha($color-purple-4, 90);
 
 $btn-secondary: alpha($color-white, 5);
 $btn-secondary-hover: alpha($color-white, 10);
+
+// Borders
+$border-purple: $color-purple-3;
+
+// backgrounds
+$tag-background-purple: alpha($color-purple-4, 10);
+$tag-background-red: alpha($color-red-2, 10);
+$tag-background-orange: alpha($color-orange-1, 10);
+
+// Texts
+$text-purple: $color-purple-5;
+$text-red: $color-red-2;
+$text-orange: $color-orange-1;
